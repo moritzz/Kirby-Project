@@ -11,7 +11,7 @@ This plugin allows to add Projects with attached images and overview pages as ou
 ## Manual Setup
 
 1. Download the Git repository as a Zip.
-2. Unpack the Zip and move contents of resulting directory to `site/plugins/link`.
+2. Unpack the Zip and move contents of resulting directory to `site/plugins/project`.
 
 ## Git Setup
 
@@ -40,3 +40,4 @@ Moreover, you can remove all styles for project related contents from `assets/cs
 # Version history
 
 - v1.0: First official version
+- v1.0.1: Fixed installation instructions
