@@ -16,7 +16,7 @@
 
       <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
       <figure>
-        <img src="<?= $image->url() ?>" alt="<?= $page->title()->html() ?>">
+        <img src="<?= $image->resize($kirby->get('option', 'project.max.width'))->url() ?>" alt="<?= $page->title()->html() ?>">
       </figure>
       <?php endforeach ?>
     </div>

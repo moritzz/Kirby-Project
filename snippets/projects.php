@@ -7,7 +7,7 @@
     <p><?= $project->text()->excerpt(160) ?> <a href="<?= $project->url() ?>"><?= $page->projects_more_link_text()->html()->or('Read&nbsp;More&nbsp;→') ?></a></p>
     <?php if($image = $project->images()->sortBy('sort', 'asc')->first()): ?>
     <a href="<?= $project->url() ?>">
-      <img src="<?= $image->url() ?>" alt="<?= $project->title()->html() ?>" >
+      <img src="<?= $image->resize($kirby->get('option', 'project.max.width'))->url() ?>" alt="<?= $project->title()->html() ?>" >
     </a>
     <?php endif ?>
   </li>
