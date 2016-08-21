@@ -23,6 +23,11 @@ fields:
     label: Latest Projects Heading
     type: text
     default: Latest Projects
+  projects_image_max_width:
+    label: Maximum Image Width
+    type: number
+    default: 880
+    step: 1
   projects_more_link_text:
     label: More Link Text
     type: text

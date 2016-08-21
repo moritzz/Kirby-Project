@@ -14,12 +14,6 @@ $kirby->set('snippet', 'projects', __DIR__ . '/snippets/projects.php');
 // = Model Registery =
 // ===================
 
-// =======================
-// = Maximum Image Width =
-// =======================
-
-$kirby->set('option', 'project.max.width', 880);
-
 # require_once(__DIR__ . '/models/LinkPage.php');
 # $kirby->set('page::model', 'link', 'LinkPage');
 

@@ -1,5 +1,7 @@
 <?php snippet('header') ?>
   
+  <?php $image_max_width = ($page->parent()->projects_image_max_width()->isEmpty()) ? 880 : $page->parent()->projects_image_max_width()->int() ?>
+  
   <?= css('/assets/plugins/project/css/project.css') ?>
   
   <main class="main" role="main">
@@ -16,7 +18,7 @@
 
       <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
       <figure>
-        <img src="<?= $image->resize($kirby->get('option', 'project.max.width'))->url() ?>" alt="<?= $page->title()->html() ?>">
+        <img src="<?= $image->resize($image_max_width)->url() ?>" alt="<?= $page->title()->html() ?>">
       </figure>
       <?php endforeach ?>
     </div>
