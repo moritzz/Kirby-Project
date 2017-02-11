@@ -14,6 +14,5 @@ $kirby->set('snippet', 'projects', __DIR__ . '/snippets/projects.php');
 // = Model Registery =
 // ===================
 
-# require_once(__DIR__ . '/models/LinkPage.php');
-# $kirby->set('page::model', 'link', 'LinkPage');
-
+require_once(__DIR__ . '/models/projects.php');
+$kirby->set('page::model', 'projects', 'ProjectsPage');
