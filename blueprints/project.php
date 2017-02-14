@@ -9,6 +9,7 @@ fields:
   title:
     label: Title
     type:  text
+    default: now
   date:
     label: Date
     type:  date
