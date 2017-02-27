@@ -40,3 +40,9 @@ fields:
     label: Tags Label
     type: text
     default: Tags
+  append_images:
+    label: Append Images
+    type:  checkbox
+    text: Append all images at the end of the page.
+    default: true
+

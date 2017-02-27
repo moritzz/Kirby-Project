@@ -16,11 +16,13 @@
     <div class="text">
       <?= $page->text()->kirbytext() ?>
 
-      <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
-      <figure>
-        <img src="<?= $image->resize($image_max_width)->url() ?>" alt="<?= $page->title()->html() ?>">
-      </figure>
-      <?php endforeach ?>
+      <?php if($page->append_images()->bool()): ?>
+          <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
+          <figure>
+            <img src="<?= $image->resize($image_max_width)->url() ?>" alt="<?= $page->title()->html() ?>">
+          </figure>
+          <?php endforeach ?>
+      <?php endif ?>
     </div>
 
     <nav class="nextprev cf" role="navigation">
