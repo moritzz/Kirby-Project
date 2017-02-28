@@ -15,8 +15,7 @@
 
     <div class="text">
       <?= $page->text()->kirbytext() ?>
-
-      <?php if($page->append_images()->bool()): ?>
+      <?php if(!$page->append_images()->exists() || $page->append_images()->isTrue()): ?>
           <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
           <figure>
             <img src="<?= $image->resize($image_max_width)->url() ?>" alt="<?= $page->title()->html() ?>">
